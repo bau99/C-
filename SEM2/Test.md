@@ -1,0 +1,1 @@
+> **git branch branch_name** - происходит создание ветки с именем **branch_name**
