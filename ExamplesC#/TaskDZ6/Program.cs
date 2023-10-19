@@ -4,21 +4,22 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-Console.WriteLine("Введите число = "); 
+Console.WriteLine("Введите число < 1000001 "); //Ограничим "Полёт фантазии"
 int number = int.Parse(Console.ReadLine()); 
-if (number > 99 && number < 1000) //Проверяем: трехзначное ли число?
+int index = 1; //Вспомогательный индекс, который "отсекает" все цифры числа после третьей 
+if (number < 100) //Для чисел с меньшей разрядностью
 {
-    int num1 = number % 10; //Берем третью цифру трехзначного числа
-    Console.WriteLine(num1);
+    Console.WriteLine("Третьей цифры нет!");
 }
-else if (number > 999 && number < 10000) //Проверяем: четырехзначное ли число?
+else
+while (index < 1000001)
 {
-    int num1 = number / 10 % 10; //Берем третью цифру четырехзначного числа
-    Console.WriteLine(num1);
+    if (number > (index*100-1) && number < (index*1000)) //Проверяем: разрядность числа
+    {
+        int num1 = number / index % 10; //Берем третью цифру числа
+        Console.WriteLine(num1);
+        break;    
+    }
+else 
+index = index*10; 
 }
-else if (number > 9999 && number < 100000) //Проверяем: пятизначное ли число?
-{
-    int num1 = number / 100 % 10; //Берем третью цифру пятизначного числа
-    Console.WriteLine(num1);
-}
-else Console.WriteLine("Третьей цифры нет!");
