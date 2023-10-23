@@ -9,11 +9,17 @@ int Digits(string message)
     int digit = Convert.ToInt32(Console.ReadLine());
     return digit;
 }
+
+void DegreeOfNumber(int digit1, int digit2)
+{
+    int result = digit1;
+    for (int i = 2; i <= digit2; i++)
+    {
+        result *= digit1;
+    }
+    System.Console.WriteLine($"{digit1} в степени {digit2} будет {result}");
+}
+
 int num1 = Digits("Введите первое натуральное число: ");
 int num2 = Digits("Введите второе натуральное число: ");
-int result = num1;
-for (int i = 2; i <= num2; i++)
-{
-    result*= num1;
-}
-System.Console.WriteLine($"{num1} в степени {num2} будет {result}");
+DegreeOfNumber(num1, num2);
