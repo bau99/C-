@@ -5,9 +5,13 @@
 
 int Digits(string message)
 {
-    Console.WriteLine(message);
-    int digit = Convert.ToInt32(Console.ReadLine());
-    return digit;
+      while (true) 
+    {   
+        Console.WriteLine(message);
+        int digit = Convert.ToInt32(Console.ReadLine());
+        if (digit > 0) return digit;   
+        else System.Console.WriteLine("Число должно быть натуральным"); 
+    } 
 }
 
 void DegreeOfNumber(int digit1, int digit2)
