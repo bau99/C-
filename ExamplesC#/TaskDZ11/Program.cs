@@ -3,11 +3,14 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-
-Console.WriteLine("Введите первое натуральное число: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите второе натуральное число: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
+int Digits(string message)
+{
+    Console.WriteLine(message);
+    int digit = Convert.ToInt32(Console.ReadLine());
+    return digit;
+}
+int num1 = Digits("Введите первое натуральное число: ");
+int num2 = Digits("Введите второе натуральное число: ");
 int result = num1;
 for (int i = 2; i <= num2; i++)
 {
