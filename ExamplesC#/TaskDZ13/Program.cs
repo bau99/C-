@@ -21,8 +21,12 @@ void FillArray(int[] array, int min, int max )
 
 void PrintArray(int[] array)
 {
-    foreach (int item in array)
-       Console.Write($"{item} ");
+    System.Console.Write("[");
+    for (int j = 0; j < array.Length; j++)
+    {
+        Console.Write(array[j] + ((j != array.Length-1) ? ", " : " "));
+    }
+    System.Console.Write("]");
     System.Console.WriteLine();
 }
 
