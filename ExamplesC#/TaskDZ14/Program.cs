@@ -8,19 +8,19 @@
 
 // При выводе элементы массива должны быть разделены символом табуляции "\t".
 
-int CountEvenElements(int[] array)
+int SummOddElements (int[] array)
 {
     // Введите свое решение ниже
-    int count = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = new Random().Next(100, 1000);
-        if (array[i] % 2 == 0)
+    int summ = 0;
+      for (int i = 0; i < array.Length; i++)
+      {
+        array[i] = new Random().Next(0,100);
+        if (i % 2 != 0)
         {
-            count++;
+            summ += array [i];
         }
-    }
-    return count;
+      }
+      return summ;
 }
 
 void PrintArray(int[] array)
@@ -35,6 +35,6 @@ void PrintArray(int[] array)
 Console.WriteLine("Введите размер массива: ");
 int arle = Convert.ToInt32(Console.ReadLine());
 int[] arr = new int[arle];
-int evenCount = CountEvenElements(arr);
+int SummOdd = SummOddElements(arr);
 PrintArray(arr);
-Console.WriteLine($"Количество четных элементов: {evenCount}");
+Console.WriteLine($"Сумма не четных элементов: {SummOdd}");
