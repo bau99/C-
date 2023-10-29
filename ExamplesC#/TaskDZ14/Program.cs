@@ -26,9 +26,10 @@ int CountEvenElements(int[] array)
 void PrintArray(int[] array)
 {
     // Введите свое решение ниже
-    foreach (int item in array)
-        Console.Write(item + ((i != array.Length-1) ? "\t" : ""));
-
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + ((i != array.Length-1) ? "\t" : ""));
+    }
     System.Console.WriteLine();
 }
 Console.WriteLine("Введите размер массива: ");
