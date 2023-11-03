@@ -43,18 +43,20 @@ int[] SummElements (int[,] array, int Length1, int Length2)
 int MinimalSumm(int[] SummArr, int LengthStr)
 {
     int min = SummArr [0];
+    int numberStr = 0;
     for (int i = 0; i < LengthStr; i++)
     {
         if (SummArr [i] < min)
         {
             min = SummArr [i];
+            numberStr = i;
         }
     }
-    return min;
+    return numberStr;
 }
 
 int m = Input("Введите количество строк: "), n = Input("Введите количество столбцов: "); 
 int[,] arr = Getmatrix(m, n, 0, 20); 
 int [] SummStr = SummElements(arr, m, n);
 int minsumm = MinimalSumm(SummStr, m);
-Console.WriteLine($"Минимальная сумма элементов: {minsumm}");
+Console.WriteLine($"Строка с минимальной суммой элементов: {minsumm+1}");
