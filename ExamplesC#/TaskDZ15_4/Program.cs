@@ -68,25 +68,12 @@ int [,] ChangeMatrix(int [,] arr2, int [] arr3, int len1, int len2)
     int b = 0;
     for (int i = 0; i < len1; i++) 
     { 
-        if (i == arr3 [1])
-        {
-            a++;
-            if (a == len1-1)
-            {
-                break;
-            }
-        }
+        if (i == arr3 [1]) continue;
+            b = 0;
         for (int j = 0; j < len2; j++) 
         { 
-            if (j == arr3 [2])
-            {
-                    b++;
-                    if (b == len2-1)
-                    {
-                        break;
-                    }
-            }
-            Change [i, j] = arr2 [a, b];
+            if (j == arr3 [2]) continue;
+            Change [a, b] = arr2 [i, j];
             b++;
         } 
         a++;
